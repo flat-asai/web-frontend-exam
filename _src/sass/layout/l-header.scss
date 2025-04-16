@@ -1,0 +1,30 @@
+.l-header {
+  position: sticky;
+  top: 0;
+  background: $baseGradientColor;
+  color: $whiteColor;
+}
+
+.l-header__inner {
+  @include contents;
+  padding-block: 42px;
+
+  @media #{$pc} {
+    padding-block: 40px;
+  }
+}
+
+.l-header__title {
+  @include font-size(30);
+  @include line-height(54, 30);
+  @include letter-spacing(30, 1.5);
+  @include font-weight-bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media #{$pc} {
+    @include font-size(36);
+    @include line-height(45, 36);
+    @include letter-spacing(36, 1.8);
+  }
+}

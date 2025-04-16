@@ -13,15 +13,25 @@ $baseContentsWidth: 1112px;
 // default color
 //*******************************
 $baseColor: #333;
+$whiteColor: #ffffff;
+$primaryColor: #04a5f1;
+$secondaryColor: #ff0000;
+$baseGradientColor: linear-gradient(to right, #04a5f1, #4a90e2);
 
 //*******************************
 // text color, link color
 //*******************************
-$baseTextColor: #333;
-$linkTextColor: #333;
+$baseTextColor: #424242;
+$linkTextColor: #424242;
+$baseHeadingColor: #333333;
 $baseHoverColor: #4a90e2;
 $baseActiveColor: #4a90e2;
 $baseVisitedColor: #333;
+
+//*******************************
+// background color
+//*******************************
+$baseBgColor: #f7f9fb;
 
 //*******************************
 // font size
@@ -34,3 +44,9 @@ $baseLineHeight: 1.75;
 // fontfamily
 //*******************************
 $baseFontFamily: "Noto Sans JP";
+
+//*******************************
+// animation
+//*******************************
+$transition-easing: ease-in-out;
+$transition-duration: 0.2s;

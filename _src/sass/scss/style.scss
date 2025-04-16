@@ -11,9 +11,13 @@
 @import "../foundation/fonts.scss";
 
 // layout
-// @import "../layout/*.scss";
+@import "../layout/*.scss";
 
 // objects
 @import "../object/component/*.scss";
 @import "../object/project/*.scss";
 @import "../object/utility/*.scss";
+
+.title {
+  color: red;
+}
