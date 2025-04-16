@@ -1,0 +1,11 @@
+:root {
+  --zindex-header: 10;
+}
+
+.l-header {
+  z-index: var(--zindex-header);
+}
+
+.l-footer {
+  z-index: calc(var(--zindex-header) - 1);
+}
