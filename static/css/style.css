@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*******************************************************************************************************
  * normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css
  *******************************************************************************************************/
@@ -291,20 +292,8 @@ a[href^="tel"] {
   transition: 0.2s ease-in-out;
 }
 
-.u-hover:hover {
-  opacity: 0.85;
-  transition: 0.2s ease-in-out;
-  filter: alpha(opacity=85);
-}
-
 a img.u-hover {
   transition: 0.2s ease-in-out;
-}
-
-a img.u-hover:hover {
-  opacity: 0.85;
-  transition: 0.2s ease-in-out;
-  filter: alpha(opacity=85);
 }
 
 @font-face {
@@ -423,6 +412,146 @@ a img.u-hover:hover {
   font-size: 30px;
   letter-spacing: 0.05em;
   font-weight: 900;
+}
+
+.c-heading01 {
+  position: relative;
+  text-align: center;
+  color: #333333;
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.5;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  font-weight: 900;
+  padding-bottom: calc(17px + 8px);
+}
+
+.c-heading01::before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  display: block;
+  width: 80px;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #04a5f1, #4a90e2);
+}
+
+.c-heading02 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 900;
+  color: #04a5f1;
+}
+
+@media (any-hover: hover) {
+  .c-link {
+    transition: color 0.2s ease-in-out;
+  }
+}
+
+@media (any-hover: hover) {
+  .c-link:hover {
+    color: #4a90e2;
+  }
+}
+
+.c-list {
+  font-weight: 900;
+}
+
+.c-list + .c-list {
+  margin-top: 8px;
+}
+
+.c-list .c-list {
+  font-weight: 400;
+}
+
+.c-list__item {
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.c-list__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 4px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.c-notice {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.75;
+}
+
+.c-notice::before {
+  content: "※";
+}
+
+.c-notice small {
+  font-size: inherit;
+}
+
+.c-temp[data-temp-level="high"] {
+  color: #ff0000;
+}
+
+.c-temp[data-temp-level="low"] {
+  color: #4a90e2;
+}
+
+.c-temp__value {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 900;
+}
+
+.c-temp__unit {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.c-temp__diff {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  text-align: center;
+}
+
+.c-text {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #424242;
+}
+
+.c-weatherTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c-weatherTable__head,
+.c-weatherTable__body {
+  background-color: #f7f9fb;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
 }
 
 .u-mt0 {
@@ -1276,6 +1405,17 @@ a img.u-hover:hover {
 
 .u-invisible {
   visibility: hidden !important;
+}
+
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  border: 0;
 }
 
 .u-uppercase {

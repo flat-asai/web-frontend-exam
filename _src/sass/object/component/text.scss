@@ -1,0 +1,5 @@
+.c-text {
+  @include font-size(16);
+  @include line-height(28, 16);
+  color: $baseTextColor;
+}

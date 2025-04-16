@@ -1,0 +1,13 @@
+.c-weatherTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c-weatherTable__head,
+.c-weatherTable__body {
+  background-color: $baseBgColor;
+  text-align: center;
+  @include font-size(16);
+  @include line-height(28, 16);
+  @include font-weight-regular;
+}

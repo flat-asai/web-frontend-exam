@@ -18,13 +18,116 @@
     <main class="l-main">
       <section class="l-section">
         <div class="l-section__inner">
-          <h2 class="l-section__title">Section 1</h2>
+          <div class="l-section__title">
+            <h2 class="c-heading01">試験概要</h2>
+          </div>
+          <div class="l-section__body">
+            <p>
+              コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。
+            </p>
+            <ul class="c-list">
+              <li class="c-list__item">
+                1 〜 4すべてご対応ください。
+                <ul class="c-list">
+                  <li class="c-list__item">
+                    「4. 提出方法」に関して、githubでの提出を推奨します。
+                  </li>
+                </ul>
+              </li>
+              <li class="c-list__item">
+                「4. 提出方法」に関して、githubでの提出を推奨します。
+              </li>
+            </ul>
+
+            <h3 class="c-heading02">
+              1. デザインに従ってコーディングをしてください
+            </h3>
+            <div>
+              <p class="c-text">
+                <a
+                  href="https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/"
+                  target="_blank"
+                  >https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/</a
+                >のデザインに沿って(問題文等も含めて)コーディングをしてください。
+                なお、ベースとなるソースコードは
+                <a
+                  href="https://github.com/d-o-n-u-t-s/web-frontend-exam/"
+                  target="_blank"
+                  >https://github.com/d-o-n-u-t-s/web-frontend-exam/</a
+                >をCloneしてご使用ください。
+              </p>
+              <p class="c-notice">
+                <small>
+                  weatherCodeに対応する天候名とアイコンの取得は
+                  <a
+                    href="https://github.com/d-o-n-u-t-s/web-frontend-exam/blob/main/getWeatherInfo.js"
+                    target="_blank"
+                    >getWeatherInfo.js</a
+                  >を使用してよいものとします。
+                </small>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="l-section" data-bg-color="gray">
         <div class="l-section__inner">
           <h2 class="l-section__title">Section 2</h2>
+
+          <div class="l-section__body">
+            <div class="p-card">
+              <div class="p-card__inner">
+                <p class="c-temp" data-temp-level="high">
+                  <span class="c-temp__value">20</span>
+                  <span class="c-temp__unit">&deg;C</span>
+                  <span class="c-temp__diff" aria-label="前日比マイナス2度">
+                    [-2]
+                  </span>
+                </p>
+
+                <p class="c-temp" data-temp-level="low">
+                  <span class="c-temp__value">5</span>
+                  <span class="c-temp__unit">&deg;C</span>
+                  <span class="c-temp__diff" aria-label="前日比0度"> [0] </span>
+                </p>
+
+                <table class="c-weatherTable" aria-labelledby="weather-caption">
+                  <caption id="weather-caption" class="u-sr-only">
+                    時間帯別降水確率
+                  </caption>
+                  <thead class="c-weatherTable__head">
+                    <tr class="c-weatherTable__row">
+                      <th scope="col" class="c-weatherTable__headItem">時間</th>
+                      <th scope="col" class="c-weatherTable__headItem">
+                        0-6時
+                      </th>
+                      <th scope="col" class="c-weatherTable__headItem">
+                        6-12時
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="c-weatherTable__body">
+                    <tr class="c-weatherTable__row">
+                      <th scope="row" class="c-weatherTable__headItem">降水</th>
+                      <td
+                        class="c-weatherTable__bodyItem"
+                        aria-label="降水確率 0パーセント"
+                      >
+                        --時
+                      </td>
+                      <td
+                        class="c-weatherTable__bodyItem"
+                        aria-label="降水確率 0パーセント"
+                      >
+                        --%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
