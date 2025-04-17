@@ -186,8 +186,8 @@
             <!--/.l-section__title-->
 
             <div class="l-section__body">
-              <div class="l-columns" data-cols="5">
-                <div class="l-columns__item" data-col="3">
+              <div class="p-weatherColumns">
+                <div class="p-weatherColumns__today">
                   <article class="p-card js-weather-card" data-period="today">
                     <header class="p-card__header">
                       <h3 class="p-card__title js-weather-title">今日の天気</h3>
@@ -212,7 +212,9 @@
                               class="c-temp__value js-weather-temp-high-value"
                             ></span>
                             <span class="c-temp__unit">&deg;C</span>
-                            <span class="c-temp__diff">
+                            <span
+                              class="c-temp__diff js-weather-temp-high-diff-label"
+                            >
                               [<span class="js-weather-temp-high-diff"></span>]
                             </span>
                           </p>
@@ -223,7 +225,9 @@
                               class="c-temp__value js-weather-temp-low-value"
                             ></span>
                             <span class="c-temp__unit">&deg;C</span>
-                            <span class="c-temp__diff">
+                            <span
+                              class="c-temp__diff js-weather-temp-low-diff-label"
+                            >
                               [<span class="js-weather-temp-low-diff"></span>]
                             </span>
                           </p>
@@ -288,7 +292,7 @@
                     </div>
                   </article>
                 </div>
-                <div class="l-columns__item" data-col="2">
+                <div class="p-weatherColumns__tomorrow">
                   <article
                     class="p-card js-weather-card"
                     data-period="tomorrow"
@@ -415,12 +419,12 @@
             <div class="l-section__body">
               <div
                 id="js-weekly-weather-container"
-                class="l-columns"
-                data-cols="5"
+                class="p-weatherColumns"
+                data-period="weekly"
               >
                 <!-- 週間天気カードのテンプレート -->
                 <template id="js-weekly-weather-template">
-                  <div class="l-columns__item">
+                  <div class="p-weatherColumns__weekly">
                     <article class="p-card" data-period="weekly">
                       <header class="p-card__header">
                         <h3 class="p-card__title js-weather-title">
