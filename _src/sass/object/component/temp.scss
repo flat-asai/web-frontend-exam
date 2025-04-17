@@ -21,6 +21,7 @@
 }
 
 .c-temp__diff {
+  display: block;
   @include font-size(16);
   @include line-height(28, 16);
   @include font-weight-regular;

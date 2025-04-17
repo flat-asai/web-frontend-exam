@@ -22,20 +22,27 @@
             <h2 class="c-heading01">試験概要</h2>
           </div>
           <div class="l-section__body">
-            <p>
+            <p class="c-text">
               コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。
             </p>
             <ul class="c-list">
               <li class="c-list__item">
-                1 〜 4すべてご対応ください。
+                フロントエンドエンジニア職に応募の方
                 <ul class="c-list">
+                  <li class="c-list__item">1 〜 4すべてご対応ください。</li>
                   <li class="c-list__item">
                     「4. 提出方法」に関して、githubでの提出を推奨します。
                   </li>
                 </ul>
               </li>
               <li class="c-list__item">
-                「4. 提出方法」に関して、githubでの提出を推奨します。
+                デザイナー職に応募の方
+                <ul class="c-list">
+                  <li class="c-list__item">1 〜 4すべてご対応ください。</li>
+                  <li class="c-list__item">
+                    「4. 提出方法」に関して、githubでの提出を推奨します。
+                  </li>
+                </ul>
               </li>
             </ul>
 
@@ -76,56 +83,243 @@
           <h2 class="l-section__title">Section 2</h2>
 
           <div class="l-section__body">
-            <div class="p-card">
-              <div class="p-card__inner">
-                <p class="c-temp" data-temp-level="high">
-                  <span class="c-temp__value">20</span>
-                  <span class="c-temp__unit">&deg;C</span>
-                  <span class="c-temp__diff" aria-label="前日比マイナス2度">
-                    [-2]
-                  </span>
-                </p>
-
-                <p class="c-temp" data-temp-level="low">
-                  <span class="c-temp__value">5</span>
-                  <span class="c-temp__unit">&deg;C</span>
-                  <span class="c-temp__diff" aria-label="前日比0度"> [0] </span>
-                </p>
-
-                <table class="c-weatherTable" aria-labelledby="weather-caption">
-                  <caption id="weather-caption" class="u-sr-only">
-                    時間帯別降水確率
-                  </caption>
-                  <thead class="c-weatherTable__head">
-                    <tr class="c-weatherTable__row">
-                      <th scope="col" class="c-weatherTable__headItem">時間</th>
-                      <th scope="col" class="c-weatherTable__headItem">
-                        0-6時
-                      </th>
-                      <th scope="col" class="c-weatherTable__headItem">
-                        6-12時
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody class="c-weatherTable__body">
-                    <tr class="c-weatherTable__row">
-                      <th scope="row" class="c-weatherTable__headItem">降水</th>
-                      <td
-                        class="c-weatherTable__bodyItem"
-                        aria-label="降水確率 0パーセント"
+            <div class="l-columns" data-cols="5">
+              <div class="l-columns__item" data-col="3">
+                <article class="p-card" data-period="today">
+                  <header class="p-card__header">
+                    <h3 class="p-card__title">今日の天気</h3>
+                  </header>
+                  <div class="p-card__body">
+                    <p class="p-card__weather">一部曇</p>
+                    <div class="p-card__weatherIcon">
+                      <img
+                        src="static/img/101.svg"
+                        alt=""
+                        aria-hidden="true"
+                        width="50"
+                        height="34"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="p-card__temps">
+                      <div class="p-card__temp">
+                        <p class="c-temp" data-temp-level="high">
+                          <span class="c-temp__value">11.9</span>
+                          <span class="c-temp__unit">&deg;C</span>
+                          <span
+                            class="c-temp__diff"
+                            aria-label="前日比マイナス2度"
+                          >
+                            [-2]
+                          </span>
+                        </p>
+                      </div>
+                      <div class="p-card__temp">
+                        <p class="c-temp" data-temp-level="low">
+                          <span class="c-temp__value">1.1</span>
+                          <span class="c-temp__unit">&deg;C</span>
+                          <span class="c-temp__diff" aria-label="前日比0度">
+                            [0]
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-card__table">
+                      <table
+                        class="c-weatherTable"
+                        aria-labelledby="weather-caption"
                       >
-                        --時
-                      </td>
-                      <td
-                        class="c-weatherTable__bodyItem"
-                        aria-label="降水確率 0パーセント"
-                      >
-                        --%
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                        <caption id="weather-caption" class="u-sr-only">
+                          時間帯別降水確率
+                        </caption>
+                        <thead class="c-weatherTable__head">
+                          <tr class="c-weatherTable__row">
+                            <th scope="col" class="c-weatherTable__headItem">
+                              時間
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              0-6時
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              6-12時
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              12-18時
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              18-24時
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="c-weatherTable__body">
+                          <tr class="c-weatherTable__row">
+                            <th scope="row" class="c-weatherTable__headItem">
+                              降水
+                            </th>
+                            <td
+                              class="c-weatherTable__bodyItem"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              --時
+                            </td>
+                            <td
+                              class="c-weatherTable__bodyItem"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              --%
+                            </td>
+                            <td
+                              class="c-weatherTable__bodyItem"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              0%
+                            </td>
+                            <td
+                              class="c-weatherTable__bodyItem"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              0%
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </article>
               </div>
+              <div class="l-columns__item" data-col="2">
+                <article class="p-card" data-period="yesterday">
+                  <header class="p-card__header">
+                    <h3 class="p-card__title">明日の天気</h3>
+                  </header>
+                  <div class="p-card__body">
+                    <p class="p-card__weather">一部曇</p>
+                    <div class="p-card__weatherIcon">
+                      <img
+                        src="static/img/200.svg"
+                        alt=""
+                        aria-hidden="true"
+                        width="50"
+                        height="34"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="p-card__temps">
+                      <div class="p-card__temp">
+                        <p class="c-temp" data-temp-level="high">
+                          <span class="c-temp__value">12.5</span>
+                          <span class="c-temp__unit">&deg;C</span>
+                          <span
+                            class="c-temp__diff"
+                            aria-label="前日比マイナス2度"
+                          >
+                            [-1]
+                          </span>
+                        </p>
+                      </div>
+                      <div class="p-card__temp">
+                        <p class="c-temp" data-temp-level="low">
+                          <span class="c-temp__value">4</span>
+                          <span class="c-temp__unit">&deg;C</span>
+                          <span class="c-temp__diff" aria-label="前日比0度">
+                            [-3]
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="p-card__table">
+                      <table
+                        class="c-weatherTable"
+                        aria-labelledby="weather-caption"
+                      >
+                        <caption id="weather-caption" class="u-sr-only">
+                          時間帯別降水確率
+                        </caption>
+                        <thead class="c-weatherTable__head">
+                          <tr class="c-weatherTable__row">
+                            <th scope="col" class="c-weatherTable__headItem">
+                              時間
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              0-6時
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              6-12時
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="c-weatherTable__body">
+                          <tr class="c-weatherTable__row">
+                            <th scope="row" class="c-weatherTable__headItem">
+                              降水
+                            </th>
+                            <td
+                              class="c-weatherTable__bodyItem"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              --時
+                            </td>
+                            <td
+                              class="c-weatherTable__bodyItem"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              --%
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="l-columns" data-cols="5">
+            <div class="l-columns__item" data-col="1">
+              <article class="p-card" data-period="weekly">
+                <header class="p-card__header">
+                  <h3 class="p-card__title">2月8日(水)</h3>
+                </header>
+                <div class="p-card__body">
+                  <p class="p-card__weather">一部曇</p>
+                  <div class="p-card__weatherIcon">
+                    <img
+                      src="static/img/100.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="50"
+                      height="34"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="p-card__temps">
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="high">
+                        <span class="c-temp__value">20</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span
+                          class="c-temp__diff"
+                          aria-label="前日比マイナス2度"
+                        >
+                          [-2]
+                        </span>
+                      </p>
+                    </div>
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="low">
+                        <span class="c-temp__value">5</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span class="c-temp__diff" aria-label="前日比0度">
+                          [0]
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
