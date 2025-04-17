@@ -1,0 +1,22 @@
+$column: 12;
+$row: 12;
+
+.l-columns {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+
+  @for $i from 1 through $column {
+    &[data-cols~="#{$i}"] {
+      grid-template-columns: repeat($i, 1fr);
+    }
+  }
+
+  > * {
+    @for $i from 1 through $column {
+      &[data-col~="#{$i}"] {
+        grid-column: span $i / span $i;
+      }
+    }
+  }
+}
