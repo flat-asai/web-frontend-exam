@@ -1,5 +1,7 @@
 .c-list {
   @include font-weight-bold;
+  @include font-size(16);
+  @include line-height(28, 16);
 
   & + & {
     margin-top: 8px;
@@ -12,16 +14,20 @@
 
 .c-list__item {
   position: relative;
-  padding-left: 1.5em;
+  padding-left: 1em;
 
   &::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0.5em;
-    width: 4px;
-    height: 4px;
+    left: 0.4em;
+    top: 0.9em;
+    width: 0.15em;
+    height: 0.15em;
     background-color: $baseColor;
     border-radius: 50%;
+  }
+
+  &:has(:not(.c-list)) {
+    margin-top: 4px;
   }
 }
