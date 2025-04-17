@@ -3,14 +3,16 @@ $row: 12;
 
 .l-columns {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 30px;
+
+  @media #{$pc} {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
 
   @for $i from 1 through $column {
     &[data-cols~="#{$i}"] {
-      @media #{$sp} {
-        grid-template-columns: repeat(1, 1fr);
-      }
       @media #{$pc} {
         grid-template-columns: repeat($i, 1fr);
       }
