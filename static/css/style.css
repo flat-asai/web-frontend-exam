@@ -334,24 +334,19 @@ a img.u-hover {
 
 .l-columns {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 30px;
 }
 
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="1"] {
-    grid-template-columns: repeat(1, 1fr);
+@media only screen and (min-width: 737px) {
+  .l-columns {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
   }
 }
 
 @media only screen and (min-width: 737px) {
   .l-columns[data-cols~="1"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="2"] {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -362,21 +357,9 @@ a img.u-hover {
   }
 }
 
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="3"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media only screen and (min-width: 737px) {
   .l-columns[data-cols~="3"] {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="4"] {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -386,21 +369,9 @@ a img.u-hover {
   }
 }
 
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="5"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media only screen and (min-width: 737px) {
   .l-columns[data-cols~="5"] {
     grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="6"] {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -410,21 +381,9 @@ a img.u-hover {
   }
 }
 
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="7"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media only screen and (min-width: 737px) {
   .l-columns[data-cols~="7"] {
     grid-template-columns: repeat(7, 1fr);
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="8"] {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -434,21 +393,9 @@ a img.u-hover {
   }
 }
 
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="9"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media only screen and (min-width: 737px) {
   .l-columns[data-cols~="9"] {
     grid-template-columns: repeat(9, 1fr);
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="10"] {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -458,21 +405,9 @@ a img.u-hover {
   }
 }
 
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="11"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media only screen and (min-width: 737px) {
   .l-columns[data-cols~="11"] {
     grid-template-columns: repeat(11, 1fr);
-  }
-}
-
-@media only screen and (max-width: 736px) {
-  .l-columns[data-cols~="12"] {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -597,7 +532,7 @@ a img.u-hover {
   max-width: calc(1080px + 16px * 2);
   padding-inline: 16px;
   margin-inline: auto;
-  padding-block: 42px;
+  padding-block: 38px;
 }
 
 @media only screen and (min-width: 737px) {
@@ -670,7 +605,7 @@ a img.u-hover {
 }
 
 .l-section__body {
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 .l-sectionChild + .l-sectionChild {
@@ -862,12 +797,12 @@ a img.u-hover {
   background-color: #fff;
 }
 
-.p-card[data-period="yesterday"] .p-card__header {
+.p-card[data-period="tomorrow"] .p-card__header {
   background-color: #e4e4e4;
   color: #333333;
 }
 
-.p-card[data-period="yesterday"] .p-card__body {
+.p-card[data-period="tomorrow"] .p-card__body {
   background-color: #fff;
 }
 
@@ -902,7 +837,13 @@ a img.u-hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 22px 16px;
+  padding: 22px 4px;
+}
+
+@media only screen and (min-width: 737px) {
+  .p-card__body {
+    padding-inline: 16px;
+  }
 }
 
 .p-card__weatherIcon {
