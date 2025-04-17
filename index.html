@@ -181,19 +181,17 @@
           <div class="l-section__body">
             <div class="l-columns" data-cols="5">
               <div class="l-columns__item" data-col="3">
-                <article class="p-card" data-period="today">
+                <article class="p-card js-weather-card" data-period="today">
                   <header class="p-card__header">
-                    <h3 class="p-card__title">今日の天気</h3>
+                    <h3 class="p-card__title js-weather-title">今日の天気</h3>
                   </header>
                   <div class="p-card__body">
-                    <p class="p-card__weather">一部曇</p>
-                    <div class="p-card__weatherIcon">
+                    <p class="p-card__weather js-weather-telop"></p>
+                    <div class="p-card__weatherIcon js-weather-icon">
                       <img
-                        src="static/img/101.svg"
+                        src=""
                         alt=""
                         aria-hidden="true"
-                        width="50"
-                        height="34"
                         loading="lazy"
                         decoding="async"
                       />
@@ -201,22 +199,22 @@
                     <div class="p-card__temps">
                       <div class="p-card__temp">
                         <p class="c-temp" data-temp-level="high">
-                          <span class="c-temp__value">11.9</span>
+                          <span class="c-temp__value js-weather-temp-high-value"></span>
                           <span class="c-temp__unit">&deg;C</span>
                           <span
                             class="c-temp__diff"
                             aria-label="前日比マイナス2度"
                           >
-                            [-2]
+                            [<span class="js-weather-temp-high-diff"></span>]
                           </span>
                         </p>
                       </div>
                       <div class="p-card__temp">
                         <p class="c-temp" data-temp-level="low">
-                          <span class="c-temp__value">1.1</span>
+                          <span class="c-temp__value js-weather-temp-low-value"></span>
                           <span class="c-temp__unit">&deg;C</span>
                           <span class="c-temp__diff" aria-label="前日比0度">
-                            [0]
+                            [<span class="js-weather-temp-low-diff"></span>]
                           </span>
                         </p>
                       </div>
@@ -254,25 +252,25 @@
                               降水
                             </th>
                             <td
-                              class="c-weatherTable__bodyItem"
+                              class="c-weatherTable__bodyItem js-weather-precipitation-0"
                               aria-label="降水確率 0パーセント"
                             >
                               --時
                             </td>
                             <td
-                              class="c-weatherTable__bodyItem"
+                              class="c-weatherTable__bodyItem js-weather-precipitation-6"
                               aria-label="降水確率 0パーセント"
                             >
                               --%
                             </td>
                             <td
-                              class="c-weatherTable__bodyItem"
+                              class="c-weatherTable__bodyItem js-weather-precipitation-12"
                               aria-label="降水確率 0パーセント"
                             >
                               0%
                             </td>
                             <td
-                              class="c-weatherTable__bodyItem"
+                              class="c-weatherTable__bodyItem js-weather-precipitation-18"
                               aria-label="降水確率 0パーセント"
                             >
                               0%
@@ -285,19 +283,17 @@
                 </article>
               </div>
               <div class="l-columns__item" data-col="2">
-                <article class="p-card" data-period="yesterday">
+                <article class="p-card js-weather-card" data-period="tomorrow">
                   <header class="p-card__header">
                     <h3 class="p-card__title">明日の天気</h3>
                   </header>
                   <div class="p-card__body">
-                    <p class="p-card__weather">一部曇</p>
-                    <div class="p-card__weatherIcon">
+                    <p class="p-card__weather js-weather-telop"></p>
+                    <div class="p-card__weatherIcon js-weather-icon">
                       <img
-                        src="static/img/200.svg"
+                        src=""
                         alt=""
                         aria-hidden="true"
-                        width="50"
-                        height="34"
                         loading="lazy"
                         decoding="async"
                       />
@@ -305,22 +301,21 @@
                     <div class="p-card__temps">
                       <div class="p-card__temp">
                         <p class="c-temp" data-temp-level="high">
-                          <span class="c-temp__value">12.5</span>
+                          <span class="c-temp__value js-weather-temp-high-value"></span>
                           <span class="c-temp__unit">&deg;C</span>
                           <span
-                            class="c-temp__diff"
-                            aria-label="前日比マイナス2度"
+                            class="c-temp__diff js-weather-temp-high-diff-label"
                           >
-                            [-1]
+                            [<span class="js-weather-temp-high-diff"></span>]
                           </span>
                         </p>
                       </div>
                       <div class="p-card__temp">
                         <p class="c-temp" data-temp-level="low">
-                          <span class="c-temp__value">4</span>
+                          <span class="c-temp__value js-weather-temp-low-value"></span>
                           <span class="c-temp__unit">&deg;C</span>
-                          <span class="c-temp__diff" aria-label="前日比0度">
-                            [-3]
+                          <span class="c-temp__diff js-weather-temp-low-diff-label">
+                            [<span class="js-weather-temp-low-diff"></span>]
                           </span>
                         </p>
                       </div>
@@ -344,6 +339,12 @@
                             <th scope="col" class="c-weatherTable__headItem">
                               6-12時
                             </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              12-18時
+                            </th>
+                            <th scope="col" class="c-weatherTable__headItem">
+                              18-24時
+                            </th>
                           </tr>
                         </thead>
                         <tbody class="c-weatherTable__body">
@@ -352,13 +353,25 @@
                               降水
                             </th>
                             <td
-                              class="c-weatherTable__bodyItem"
+                              class="c-weatherTable__bodyItem js-weather-precipitation-0"
                               aria-label="降水確率 0パーセント"
                             >
                               --時
                             </td>
                             <td
-                              class="c-weatherTable__bodyItem"
+                              class="c-weatherTable__bodyItem js-weather-precipitation-6"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              --%
+                            </td>
+                            <td
+                              class="c-weatherTable__bodyItem js-weather-precipitation-12"
+                              aria-label="降水確率 0パーセント"
+                            >
+                              --%
+                            </td>
+                            <td
+                              class="c-weatherTable__bodyItem js-weather-precipitation-18"
                               aria-label="降水確率 0パーセント"
                             >
                               --%
@@ -378,23 +391,26 @@
       </section>
       <!--/.l-section-->
 
-      <section class="l-section">
+      <section class="l-section js-weekly">
         <div class="l-section__inner">
           <div class="l-section__title">
             <h2 class="c-heading01" data-size="sm">今週の天気</h2>
           </div>
           <div class="l-section__body">
-          <div class="l-columns" data-cols="5">
+
+          <div id="js-weekly-weather-container" class="l-columns" data-cols="5">
+          <!-- 週間天気カードのテンプレート -->
+          <template id="js-weekly-weather-template">
             <div class="l-columns__item">
               <article class="p-card" data-period="weekly">
                 <header class="p-card__header">
-                  <h3 class="p-card__title">2月8日(水)</h3>
+                  <h3 class="p-card__title js-weather-title"></h3>
                 </header>
                 <div class="p-card__body">
-                  <p class="p-card__weather">一部曇</p>
-                  <div class="p-card__weatherIcon">
+                  <p class="p-card__weather js-weather-telop"></p>
+                  <div class="p-card__weatherIcon js-weather-icon">
                     <img
-                      src="static/img/100.svg"
+                      src=""
                       alt=""
                       aria-hidden="true"
                       width="50"
@@ -406,22 +422,19 @@
                   <div class="p-card__temps">
                     <div class="p-card__temp">
                       <p class="c-temp" data-temp-level="high">
-                        <span class="c-temp__value">11.9</span>
+                        <span class="c-temp__value js-weather-temp-high-value"></span>
                         <span class="c-temp__unit">&deg;C</span>
-                        <span
-                          class="c-temp__diff"
-                          aria-label="前日比マイナス2度"
-                        >
-                          [-2]
+                        <span class="c-temp__diff js-weather-temp-high-diff-label">
+                          [<span class="c-temp__diff-value js-weather-temp-high-diff"></span>]
                         </span>
                       </p>
                     </div>
                     <div class="p-card__temp">
                       <p class="c-temp" data-temp-level="low">
-                        <span class="c-temp__value">1.1</span>
+                        <span class="c-temp__value js-weather-temp-low-value"></span>
                         <span class="c-temp__unit">&deg;C</span>
-                        <span class="c-temp__diff" aria-label="前日比0度">
-                          [0]
+                        <span class="c-temp__diff js-weather-temp-low-diff-label">
+                          [<span class="c-temp__diff-value js-weather-temp-low-diff"></span>]
                         </span>
                       </p>
                     </div>
@@ -429,182 +442,7 @@
                 </div>
               </article>
             </div>
-            <div class="l-columns__item">
-              <article class="p-card" data-period="weekly">
-                <header class="p-card__header">
-                  <h3 class="p-card__title">2月8日(水)</h3>
-                </header>
-                <div class="p-card__body">
-                  <p class="p-card__weather">一部曇</p>
-                  <div class="p-card__weatherIcon">
-                    <img
-                      src="static/img/100.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width="50"
-                      height="34"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="p-card__temps">
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="high">
-                        <span class="c-temp__value">11.9</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span
-                          class="c-temp__diff"
-                          aria-label="前日比マイナス2度"
-                        >
-                          [-2]
-                        </span>
-                      </p>
-                    </div>
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="low">
-                        <span class="c-temp__value">1.1</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span class="c-temp__diff" aria-label="前日比0度">
-                          [0]
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="l-columns__item">
-              <article class="p-card" data-period="weekly">
-                <header class="p-card__header">
-                  <h3 class="p-card__title">2月8日(水)</h3>
-                </header>
-                <div class="p-card__body">
-                  <p class="p-card__weather">一部曇</p>
-                  <div class="p-card__weatherIcon">
-                    <img
-                      src="static/img/100.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width="50"
-                      height="34"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="p-card__temps">
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="high">
-                        <span class="c-temp__value">11.9</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span
-                          class="c-temp__diff"
-                          aria-label="前日比マイナス2度"
-                        >
-                          [-2]
-                        </span>
-                      </p>
-                    </div>
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="low">
-                        <span class="c-temp__value">1.1</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span class="c-temp__diff" aria-label="前日比0度">
-                          [0]
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-                        <div class="l-columns__item">
-              <article class="p-card" data-period="weekly">
-                <header class="p-card__header">
-                  <h3 class="p-card__title">2月8日(水)</h3>
-                </header>
-                <div class="p-card__body">
-                  <p class="p-card__weather">一部曇</p>
-                  <div class="p-card__weatherIcon">
-                    <img
-                      src="static/img/100.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width="50"
-                      height="34"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="p-card__temps">
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="high">
-                        <span class="c-temp__value">11.9</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span
-                          class="c-temp__diff"
-                          aria-label="前日比マイナス2度"
-                        >
-                          [-2]
-                        </span>
-                      </p>
-                    </div>
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="low">
-                        <span class="c-temp__value">1.1</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span class="c-temp__diff" aria-label="前日比0度">
-                          [0]
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-                        <div class="l-columns__item">
-              <article class="p-card" data-period="weekly">
-                <header class="p-card__header">
-                  <h3 class="p-card__title">2月8日(水)</h3>
-                </header>
-                <div class="p-card__body">
-                  <p class="p-card__weather">一部曇</p>
-                  <div class="p-card__weatherIcon">
-                    <img
-                      src="static/img/100.svg"
-                      alt=""
-                      aria-hidden="true"
-                      width="50"
-                      height="34"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <div class="p-card__temps">
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="high">
-                        <span class="c-temp__value">11.9</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span
-                          class="c-temp__diff"
-                          aria-label="前日比マイナス2度"
-                        >
-                          [-2]
-                        </span>
-                      </p>
-                    </div>
-                    <div class="p-card__temp">
-                      <p class="c-temp" data-temp-level="low">
-                        <span class="c-temp__value">1.1</span>
-                        <span class="c-temp__unit">&deg;C</span>
-                        <span class="c-temp__diff" aria-label="前日比0度">
-                          [0]
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
+          </template>
           </div>
           <!--/.l-section__body-->
         </div>
