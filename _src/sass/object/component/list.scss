@@ -1,0 +1,36 @@
+.c-list {
+  @include font-size(16);
+  @include line-height(28, 16);
+
+  & + & {
+    margin-top: 8px;
+  }
+
+  .c-list {
+    @include font-weight-regular;
+  }
+}
+
+.c-list__item {
+  position: relative;
+  text-indent: 1em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.4em;
+    top: 0.9em;
+    width: 0.15em;
+    height: 0.15em;
+    background-color: $baseColor;
+    border-radius: 50%;
+  }
+
+  &:has(:not(.c-list)) + & {
+    margin-top: 14px;
+
+    @media #{$pc} {
+      margin-top: 4px;
+    }
+  }
+}

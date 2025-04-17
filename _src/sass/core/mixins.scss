@@ -2,6 +2,50 @@
 // # mixin
 // *******************************************************************************************************
 
+// ## contents width
+// --------------------------------------------------------
+// `@include %contents;`
+@mixin contents() {
+  width: 100%;
+  max-width: calc(#{$baseContentsWidth} + 16px * 2);
+  padding-inline: 16px;
+  margin-inline: auto;
+
+  @media #{$pc} {
+    max-width: calc(#{$baseContentsWidth} + 40px * 2);
+    padding-inline: 40px;
+  }
+}
+
+// ## font
+// --------------------------------------------------------
+// `@include %font-size;`
+// `@include %letter-spacing;`
+// `@include %line-height;`
+// `@include %font-weight-bold;`
+// `@include %font-weight-medium;`
+// `@include %font-weight-regular;`
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+@mixin letter-spacing($font-size, $spacing) {
+  font-size: $font-size + px;
+  letter-spacing: ($spacing / $font-size) + em;
+}
+@mixin line-height($size, $base) {
+  line-height: ($size / $base);
+}
+@mixin font-weight-bold {
+  font-weight: 900;
+}
+@mixin font-weight-medium {
+  font-weight: 500;
+}
+@mixin font-weight-regular {
+  font-weight: 400;
+}
+
 // ## clearfix
 // --------------------------------------------------------
 // `@include %cfx;`
@@ -20,16 +64,22 @@
   }
 }
 
-
 // ## mouseover animation opacity
 // --------------------------------------------------------
 // `@include %hover;`
+// `@include %any-hover;`
 // `@include %hout;`
-@mixin hover($num: 0.85, $sec: 0.2s) {
-  opacity: $num;
-  transition: $sec ease-in-out;
-
-  filter: alpha(opacity=$num * 100);
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+@mixin any-hover {
+  @media (any-hover: hover) {
+    @content;
+  }
 }
 @mixin hout($sec: 0.2s) {
   transition: $sec ease-in-out;

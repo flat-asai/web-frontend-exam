@@ -1,0 +1,12 @@
+.c-notice {
+  @include font-size(12);
+  @include line-height(21, 12);
+
+  &::before {
+    content: "※";
+  }
+
+  small {
+    font-size: inherit;
+  }
+}

@@ -1,0 +1,22 @@
+.l-section {
+  padding-block: 80px;
+
+  &[data-bg-color="gray"] {
+    background-color: $baseBgColor;
+  }
+}
+
+.l-section__inner {
+  @include contents;
+}
+
+.l-section__title {
+  @include font-size(30);
+  @include line-height(54, 30);
+  @include letter-spacing(30, 1.5);
+  @include font-weight-bold;
+}
+
+.l-section__body {
+  margin-top: 30px;
+}

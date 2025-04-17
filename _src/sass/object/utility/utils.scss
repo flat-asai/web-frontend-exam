@@ -17,7 +17,6 @@
   text-align: right !important;
 }
 
-
 // --------------------------------------------------
 //	vertical align
 // --------------------------------------------------
@@ -52,6 +51,27 @@
   visibility: hidden !important;
 }
 
+// --------------------------------------------------
+//	screen reader only
+// --------------------------------------------------
+
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  border: 0;
+}
+
+// --------------------------------------------------
+//  uppercase
+// --------------------------------------------------
+.u-uppercase {
+  text-transform: uppercase !important;
+}
 
 // --------------------------------------------------
 //  clearfix
@@ -59,7 +79,6 @@
 .u-cfx {
   @include cfx;
 }
-
 
 // --------------------------------------------------
 //  switch display
@@ -75,4 +94,19 @@
   .u-sp-none {
     display: none !important;
   }
+}
+
+// --------------------------------------------------
+//  font-weight
+// --------------------------------------------------
+.u-fw-bold {
+  font-weight: 900 !important;
+}
+
+.u-fw-medium {
+  font-weight: 500 !important;
+}
+
+.u-fw-regular {
+  font-weight: 400 !important;
 }

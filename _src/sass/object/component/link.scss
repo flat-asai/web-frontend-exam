@@ -1,0 +1,9 @@
+.c-link {
+  @include any-hover {
+    transition: color $transition-duration $transition-easing;
+  }
+
+  @include hover {
+    color: $baseHoverColor;
+  }
+}

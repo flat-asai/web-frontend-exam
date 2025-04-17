@@ -1,0 +1,19 @@
+.l-footer {
+  position: sticky;
+  top: 100vh;
+  padding-block: 80px;
+}
+
+.l-footer__inner {
+  @include contents;
+}
+
+.l-footer__copyright {
+  @include font-size(12);
+  @include line-height(21, 12);
+  text-align: center;
+
+  small {
+    font-size: inherit;
+  }
+}
