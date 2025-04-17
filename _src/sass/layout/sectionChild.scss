@@ -1,0 +1,9 @@
+.l-sectionChild {
+  & + & {
+    margin-top: 28px;
+  }
+}
+
+.l-sectionChild__notice {
+  margin-top: 14px;
+}

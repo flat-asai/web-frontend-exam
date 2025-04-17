@@ -10,24 +10,26 @@
     <link rel="stylesheet" href="static/css/style.css" />
   </head>
   <body>
+    <div class="l-wrapper">
     <header class="l-header">
       <div class="l-header__inner">
         <h1 class="l-header__title" lang="en">Donuts Frontend Exam</h1>
       </div>
     </header>
     <main class="l-main">
-      <section class="l-section">
+      <section class="l-section" data-bg-color="gray">
         <div class="l-section__inner">
           <div class="l-section__title">
             <h2 class="c-heading01">試験概要</h2>
           </div>
+          <!--/.l-section__title-->
           <div class="l-section__body">
             <p class="c-text">
               コーディング課題（試験内容）に取り組んでいただきたく、ご案内お願いいたします。
             </p>
-            <ul class="c-list">
+            <ul class="c-list u-mt10">
               <li class="c-list__item">
-                フロントエンドエンジニア職に応募の方
+                <span class="u-fw-bold">フロントエンドエンジニア職に応募の方</span>
                 <ul class="c-list">
                   <li class="c-list__item">1 〜 4すべてご対応ください。</li>
                   <li class="c-list__item">
@@ -36,51 +38,145 @@
                 </ul>
               </li>
               <li class="c-list__item">
-                デザイナー職に応募の方
+                <span class="u-fw-bold">デザイナー職に応募の方</span>
                 <ul class="c-list">
-                  <li class="c-list__item">1 〜 4すべてご対応ください。</li>
+                  <li class="c-list__item">「3. APIによる反映」 の対応は不要です。</li>
                   <li class="c-list__item">
-                    「4. 提出方法」に関して、githubでの提出を推奨します。
+                    「4. 提出方法」に関して、githubでの提出が難しい場合、圧縮ファイルでの提出でも可です。
                   </li>
                 </ul>
               </li>
             </ul>
-
-            <h3 class="c-heading02">
-              1. デザインに従ってコーディングをしてください
-            </h3>
-            <div>
-              <p class="c-text">
-                <a
-                  href="https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/"
-                  target="_blank"
-                  >https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/</a
-                >のデザインに沿って(問題文等も含めて)コーディングをしてください。
-                なお、ベースとなるソースコードは
-                <a
-                  href="https://github.com/d-o-n-u-t-s/web-frontend-exam/"
-                  target="_blank"
-                  >https://github.com/d-o-n-u-t-s/web-frontend-exam/</a
-                >をCloneしてご使用ください。
-              </p>
-              <p class="c-notice">
-                <small>
-                  weatherCodeに対応する天候名とアイコンの取得は
-                  <a
-                    href="https://github.com/d-o-n-u-t-s/web-frontend-exam/blob/main/getWeatherInfo.js"
-                    target="_blank"
-                    >getWeatherInfo.js</a
-                  >を使用してよいものとします。
-                </small>
-              </p>
-            </div>
           </div>
+          <!--/.l-section__body-->
         </div>
+        <!--/.l-section__inner-->
       </section>
+      <!--/.l-section-->
+
+      <section class="l-section">
+        <div class="l-section__inner">
+          <div class="l-section__title">
+            <h2 class="c-heading01">試験内容</h2>
+          </div>
+          <!--/.l-section__title-->
+          <div class="l-section__body">
+            <section class="l-sectionChild">
+              <div class="l-sectionChild__title">
+                <h3 class="c-heading02">
+                  1. デザインに従ってコーディングをしてください
+                </h3>
+              </div>
+              <div class="l-sectionChild__body">
+                <p class="c-text">
+                  <a
+                    href="https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/"
+                    target="_blank"
+                    >https://xd.adobe.com/view/6326e7bd-2396-4838-8359-32f096cac59d-3675/</a
+                  >のデザインに沿って(問題文等も含めて)コーディングをしてください。<br>
+                  なお、ベースとなるソースコードは
+                  <a
+                    href="https://github.com/d-o-n-u-t-s/web-frontend-exam/"
+                    target="_blank"
+                    >https://github.com/d-o-n-u-t-s/web-frontend-exam/</a
+                  >をCloneしてご使用ください。
+                </p>
+              </div>
+            </section>
+            <!--/.l-sectionChild-->
+            <section class="l-sectionChild">
+              <div class="l-sectionChild__title">
+                <h3 class="c-heading02">
+                  2. レスポンシブにコーディングしてください
+                </h3>
+              </div>
+              <div class="l-sectionChild__body">
+                <p class="c-text">
+                  PC、モバイルそれぞれで何か1つのブラウザで確認できる状態にしてください。<br>
+                  なお、提出時に確認済みブラウザを共有下さい。
+                </p>
+              </div>
+            </section>
+            <!--/.l-sectionChild-->
+
+            <section class="l-sectionChild">
+              <div class="l-sectionChild__title">
+                <h3 class="c-heading02">
+                  3. 以下のAPIを使って、天気情報を動的に取得し反映させてください
+                </h3>
+              </div>
+              <div class="l-sectionChild__body">
+                <ul class="c-list">
+                  <li class="c-list__item">
+                    Open-Meteo WeatherForecastAPI ...
+                    <a href="https://open-meteo.com/en/docs/" target="_blank"
+                      >https://open-meteo.com/en/docs/</a
+                    >
+                  </li>
+                  <li class="c-list__item">
+                    天気予報 API（livedoor 天気互換） …
+                    <a href="https://weather.tsukumijima.net/" target="_blank"
+                      >https://weather.tsukumijima.net/</a
+                    >
+                  </li>
+                </ul>
+
+                <div class="l-sectionChild__notice">
+                  <p class="c-notice">
+                    <small
+                      >weatherCodeに対応する天候名とアイコンの取得はgetWeatherInfo.js
+                      を使用してよいものとします。</small
+                    >
+                  </p>
+                  <p class="c-notice">
+                    <small
+                      >どちらも観測地点は東京とし、(緯度, 経度) = (35.6785,
+                      139.6823) とします。</small
+                    >
+                  </p>
+                  <p class="c-notice">
+                    <small
+                      >※
+                      APIからの取得が難しい場合は、レイアウトのみ再現してください。</small
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!--/.l-sectionChild-->
+
+            <section class="l-sectionChild">
+              <div class="l-sectionChild__title">
+                <h3 class="c-heading02">
+                  4. 以下のいずれかの方法で提出をしてください
+                </h3>
+              </div>
+              <div class="l-sectionChild__body">
+                <ul class="c-list">
+                  <li class="c-list__item">
+                    ご自身のgithub上にリポジトリを作成し、そこにpushした上で、リポジトリURLを共有する。
+                  </li>
+                  <li class="c-list__item">
+                    clone先のディレクトリを.gitディレクトリを含んだ状態で圧縮(zip,
+                    tar等)し、添付して提出する。
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!--/.l-sectionChild-->
+          </div>
+          <!--/.l-section__body-->
+        </div>
+        <!--/.l-section__inner-->
+      </section>
+      <!--/.l-section-->
 
       <section class="l-section" data-bg-color="gray">
         <div class="l-section__inner">
-          <h2 class="l-section__title">Section 2</h2>
+          <div class="l-section__title">
+            <h2 class="c-heading01" data-size="sm">今日/明日の天気</h2>
+          </div>
+          <!--/.l-section__title-->
 
           <div class="l-section__body">
             <div class="l-columns" data-cols="5">
@@ -276,8 +372,20 @@
               </div>
             </div>
           </div>
+          <!--/.l-section__body-->
+        </div>
+        <!--/.l-section__inner-->
+      </section>
+      <!--/.l-section-->
+
+      <section class="l-section">
+        <div class="l-section__inner">
+          <div class="l-section__title">
+            <h2 class="c-heading01" data-size="sm">今週の天気</h2>
+          </div>
+          <div class="l-section__body">
           <div class="l-columns" data-cols="5">
-            <div class="l-columns__item" data-col="1">
+            <div class="l-columns__item">
               <article class="p-card" data-period="weekly">
                 <header class="p-card__header">
                   <h3 class="p-card__title">2月8日(水)</h3>
@@ -298,7 +406,7 @@
                   <div class="p-card__temps">
                     <div class="p-card__temp">
                       <p class="c-temp" data-temp-level="high">
-                        <span class="c-temp__value">20</span>
+                        <span class="c-temp__value">11.9</span>
                         <span class="c-temp__unit">&deg;C</span>
                         <span
                           class="c-temp__diff"
@@ -310,7 +418,183 @@
                     </div>
                     <div class="p-card__temp">
                       <p class="c-temp" data-temp-level="low">
-                        <span class="c-temp__value">5</span>
+                        <span class="c-temp__value">1.1</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span class="c-temp__diff" aria-label="前日比0度">
+                          [0]
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="l-columns__item">
+              <article class="p-card" data-period="weekly">
+                <header class="p-card__header">
+                  <h3 class="p-card__title">2月8日(水)</h3>
+                </header>
+                <div class="p-card__body">
+                  <p class="p-card__weather">一部曇</p>
+                  <div class="p-card__weatherIcon">
+                    <img
+                      src="static/img/100.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="50"
+                      height="34"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="p-card__temps">
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="high">
+                        <span class="c-temp__value">11.9</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span
+                          class="c-temp__diff"
+                          aria-label="前日比マイナス2度"
+                        >
+                          [-2]
+                        </span>
+                      </p>
+                    </div>
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="low">
+                        <span class="c-temp__value">1.1</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span class="c-temp__diff" aria-label="前日比0度">
+                          [0]
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="l-columns__item">
+              <article class="p-card" data-period="weekly">
+                <header class="p-card__header">
+                  <h3 class="p-card__title">2月8日(水)</h3>
+                </header>
+                <div class="p-card__body">
+                  <p class="p-card__weather">一部曇</p>
+                  <div class="p-card__weatherIcon">
+                    <img
+                      src="static/img/100.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="50"
+                      height="34"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="p-card__temps">
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="high">
+                        <span class="c-temp__value">11.9</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span
+                          class="c-temp__diff"
+                          aria-label="前日比マイナス2度"
+                        >
+                          [-2]
+                        </span>
+                      </p>
+                    </div>
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="low">
+                        <span class="c-temp__value">1.1</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span class="c-temp__diff" aria-label="前日比0度">
+                          [0]
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+                        <div class="l-columns__item">
+              <article class="p-card" data-period="weekly">
+                <header class="p-card__header">
+                  <h3 class="p-card__title">2月8日(水)</h3>
+                </header>
+                <div class="p-card__body">
+                  <p class="p-card__weather">一部曇</p>
+                  <div class="p-card__weatherIcon">
+                    <img
+                      src="static/img/100.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="50"
+                      height="34"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="p-card__temps">
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="high">
+                        <span class="c-temp__value">11.9</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span
+                          class="c-temp__diff"
+                          aria-label="前日比マイナス2度"
+                        >
+                          [-2]
+                        </span>
+                      </p>
+                    </div>
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="low">
+                        <span class="c-temp__value">1.1</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span class="c-temp__diff" aria-label="前日比0度">
+                          [0]
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+                        <div class="l-columns__item">
+              <article class="p-card" data-period="weekly">
+                <header class="p-card__header">
+                  <h3 class="p-card__title">2月8日(水)</h3>
+                </header>
+                <div class="p-card__body">
+                  <p class="p-card__weather">一部曇</p>
+                  <div class="p-card__weatherIcon">
+                    <img
+                      src="static/img/100.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width="50"
+                      height="34"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="p-card__temps">
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="high">
+                        <span class="c-temp__value">11.9</span>
+                        <span class="c-temp__unit">&deg;C</span>
+                        <span
+                          class="c-temp__diff"
+                          aria-label="前日比マイナス2度"
+                        >
+                          [-2]
+                        </span>
+                      </p>
+                    </div>
+                    <div class="p-card__temp">
+                      <p class="c-temp" data-temp-level="low">
+                        <span class="c-temp__value">1.1</span>
                         <span class="c-temp__unit">&deg;C</span>
                         <span class="c-temp__diff" aria-label="前日比0度">
                           [0]
@@ -322,8 +606,11 @@
               </article>
             </div>
           </div>
+          <!--/.l-section__body-->
         </div>
+        <!--/.l-section__inner-->
       </section>
+      <!--/.l-section-->
     </main>
     <footer class="l-footer">
       <div class="l-footer__inner">
@@ -333,7 +620,8 @@
           </small>
         </p>
       </div>
-    </footer>
+      </footer>
+    </div>
     <script src="static/js/all.min.js"></script>
   </body>
 </html>

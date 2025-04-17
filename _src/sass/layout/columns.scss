@@ -8,14 +8,21 @@ $row: 12;
 
   @for $i from 1 through $column {
     &[data-cols~="#{$i}"] {
-      grid-template-columns: repeat($i, 1fr);
+      @media #{$sp} {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      @media #{$pc} {
+        grid-template-columns: repeat($i, 1fr);
+      }
     }
   }
 
   > * {
     @for $i from 1 through $column {
       &[data-col~="#{$i}"] {
-        grid-column: span $i / span $i;
+        @media #{$pc} {
+          grid-column: span $i / span $i;
+        }
       }
     }
   }
