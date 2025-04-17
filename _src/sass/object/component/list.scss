@@ -1,5 +1,4 @@
 .c-list {
-  @include font-weight-bold;
   @include font-size(16);
   @include line-height(28, 16);
 
@@ -14,7 +13,7 @@
 
 .c-list__item {
   position: relative;
-  padding-left: 1em;
+  text-indent: 1em;
 
   &::before {
     content: "";
@@ -27,7 +26,11 @@
     border-radius: 50%;
   }
 
-  &:has(:not(.c-list)) {
-    margin-top: 4px;
+  &:has(:not(.c-list)) + & {
+    margin-top: 14px;
+
+    @media #{$pc} {
+      margin-top: 4px;
+    }
   }
 }

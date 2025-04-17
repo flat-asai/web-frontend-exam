@@ -7,9 +7,14 @@
 // `@include %contents;`
 @mixin contents() {
   width: 100%;
-  max-width: $baseContentsWidth;
+  max-width: calc(#{$baseContentsWidth} + 16px * 2);
   padding-inline: 16px;
   margin-inline: auto;
+
+  @media #{$pc} {
+    max-width: calc(#{$baseContentsWidth} + 40px * 2);
+    padding-inline: 40px;
+  }
 }
 
 // ## font

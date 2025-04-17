@@ -37,11 +37,15 @@
   @include font-size(20);
   @include line-height(28, 20);
   @include font-weight-bold;
-  padding: 21px 16px;
+  padding: 21px 4px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media #{$pc} {
+    padding-inline: 16px;
+  }
 }
 
 .p-card__body {

@@ -7,10 +7,10 @@
 
 .l-header__inner {
   @include contents;
-  padding-block: 42px;
+  padding-block: 38px;
 
   @media #{$pc} {
-    padding-block: 40px;
+    padding-block: 45px;
   }
 }
 
