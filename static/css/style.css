@@ -332,163 +332,6 @@ a img.u-hover {
   z-index: calc(var(--zindex-header) - 1);
 }
 
-.l-columns {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  row-gap: 30px;
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="1"] {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="2"] {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="3"] {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="4"] {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="5"] {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="6"] {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="7"] {
-    grid-template-columns: repeat(7, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="8"] {
-    grid-template-columns: repeat(8, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="9"] {
-    grid-template-columns: repeat(9, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="10"] {
-    grid-template-columns: repeat(10, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="11"] {
-    grid-template-columns: repeat(11, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns[data-cols~="12"] {
-    grid-template-columns: repeat(12, 1fr);
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="1"] {
-    grid-column: span 1/span 1;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="2"] {
-    grid-column: span 2/span 2;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="3"] {
-    grid-column: span 3/span 3;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="4"] {
-    grid-column: span 4/span 4;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="5"] {
-    grid-column: span 5/span 5;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="6"] {
-    grid-column: span 6/span 6;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="7"] {
-    grid-column: span 7/span 7;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="8"] {
-    grid-column: span 8/span 8;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="9"] {
-    grid-column: span 9/span 9;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="10"] {
-    grid-column: span 10/span 10;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="11"] {
-    grid-column: span 11/span 11;
-  }
-}
-
-@media only screen and (min-width: 737px) {
-  .l-columns > *[data-col~="12"] {
-    grid-column: span 12/span 12;
-  }
-}
-
 .l-footer {
   position: sticky;
   top: 100vh;
@@ -871,6 +714,60 @@ a img.u-hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.p-weatherColumns {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+@media only screen and (min-width: 737px) {
+  .p-weatherColumns {
+    gap: 16px;
+  }
+}
+
+.p-weatherColumns[data-period="weekly"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@media only screen and (max-width: 736px) {
+  .p-weatherColumns__today {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 737px) {
+  .p-weatherColumns__today {
+    flex-grow: 1;
+    min-width: 640px;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .p-weatherColumns__tomorrow {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 737px) {
+  .p-weatherColumns__tomorrow {
+    flex-grow: 1;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  .p-weatherColumns__weekly {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (min-width: 737px) {
+  .p-weatherColumns__weekly {
+    grid-column: span 1;
+  }
 }
 
 .u-mt0 {

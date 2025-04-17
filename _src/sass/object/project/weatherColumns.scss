@@ -1,0 +1,45 @@
+.p-weatherColumns {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+
+  @media #{$pc} {
+    gap: 16px;
+  }
+
+  &[data-period="weekly"] {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.p-weatherColumns__today {
+  @media #{$sp} {
+    width: 100%;
+  }
+
+  @media #{$pc} {
+    flex-grow: 1;
+    min-width: 640px;
+  }
+}
+
+.p-weatherColumns__tomorrow {
+  @media #{$sp} {
+    width: 100%;
+  }
+
+  @media #{$pc} {
+    flex-grow: 1;
+  }
+}
+
+.p-weatherColumns__weekly {
+  @media #{$sp} {
+    grid-column: 1 / -1;
+  }
+
+  @media #{$pc} {
+    grid-column: span 1;
+  }
+}
