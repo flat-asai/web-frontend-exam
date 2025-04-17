@@ -68,9 +68,6 @@ const fetchTodayAndTomorrowWeather = async () => {
   const todayWeather = weatherInfo[0];
   const tomorrowWeather = weatherInfo[1];
 
-  console.log(todayWeather);
-  console.log(tomorrowWeather);
-
   updateWeatherCard(todayWeather, todayWeatherCard);
   updateWeatherCard(tomorrowWeather, tomorrowWeatherCard);
 };
